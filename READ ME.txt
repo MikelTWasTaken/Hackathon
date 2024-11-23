@@ -1,0 +1,70 @@
+Centsible Invest│
+├── main.py                  # Entry point for the program
+├── requirements.txt         # List of required libraries (e.g., Faker, requests, SQLite3)
+│
+├── data/                    # Folder to store database or sample data
+│   ├── transactions.db      # SQLite database file
+│   └── sample_data.json     # Optional sample data for testing
+├── modules/                 # Folder for custom Python modules (OOP classes)
+│   ├── transaction.py       # Class for handling transactions
+│   ├── portfolio.py         # Class for managing the Gimmy Portfolio
+│   ├── spending_analyzer.py # Class for analyzing spending habits
+│   ├── api_client.py        # Class for handling API calls
+│   └── database_manager.py  # Class for database interactions
+├── utils/                   # Utility functions (optional, for helper scripts)
+│   ├── faker_generator.py   # Script to generate sample data with Faker
+│   └── visualizer.py        # Helper for graphing portfolio growth (if applicable)
+└── README.md                # Documentation for the project
+
+################################################################
+
+Main.py: The "center" where you decide what happens.
+Modules: Drawers where you keep tools for different tasks.
+Data: A box for important items (database/test data).
+Utils: A side table for extras (like graphs).
+README: A manual to explain how everything works.
+
+################################################################
+
+
+Example of How main.py Calls Modules
+
+Transaction Class (transaction.py):
+Handles spare change calculations.
+Example: transaction.calculate_spare_change()
+
+Portfolio Class (portfolio.py):
+Tracks spare change and simulates growth.
+Example: portfolio.add_spare_change(spare_change)
+
+DatabaseManager Class (database_manager.py):
+Reads and writes transactions to/from the database.
+Example: db_manager.get_all_transactions()
+
+SpendingAnalyzer Class (spending_analyzer.py):
+Computes spending summaries and top categories.
+Example: analyzer.calculate_summary()
+
+StockAPIClient Class (api_client.py):
+Fetches stock data for growth simulation.
+Example: api_client.get_stock_data()
+
+################################################################
+
+How It Works
+
+Import Classes
+
+Each task is handled by a separate class imported from the modules/ folder.
+Initialize Components
+
+Objects like DatabaseManager, Portfolio, and SpendingAnalyzer are created to manage their respective tasks.
+Step-by-Step Workflow
+
+Database setup: Populate the database with fake data.
+Transaction processing: Fetch transactions, calculate spare change, and update the portfolio.
+Portfolio growth: Use the API client to simulate growth based on real-world stock data.
+Spending analysis: Analyze spending habits and identify where users spend the most.
+Display Results
+
+The results of the portfolio simulation and spending analysis are shown in the console.
